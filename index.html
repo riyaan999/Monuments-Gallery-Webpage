@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monuments Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Heritage Haven</h1>
+            <div class="controls">
+                <button id="addMonumentBtn" class="btn">Add Monument</button>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search monuments...">
+                    <button id="searchBtn" class="btn">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="monuments-grid" id="monumentsGrid">
+            <!-- Monuments will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Add Monument Modal -->
+    <div id="addMonumentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Monument</h2>
+            <form id="monumentForm">
+                <div class="form-group">
+                    <label for="monumentImage">Image URL:</label>
+                    <input type="text" id="monumentImage" required>
+                </div>
+                <div class="form-group">
+                    <label for="monumentName">Name:</label>
+                    <input type="text" id="monumentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="monumentDesc">Description:</label>
+                    <textarea id="monumentDesc" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="monumentCity">City:</label>
+                    <input type="text" id="monumentCity" required>
+                </div>
+                <button type="submit" class="btn">Save Monument</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Monument Modal -->
+    <div id="editMonumentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Monument</h2>
+            <form id="editMonumentForm">
+                <input type="hidden" id="editMonumentId">
+                <div class="form-group">
+                    <label for="editMonumentImage">Image URL:</label>
+                    <input type="text" id="editMonumentImage" required>
+                </div>
+                <div class="form-group">
+                    <label for="editMonumentName">Name:</label>
+                    <input type="text" id="editMonumentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editMonumentDesc">Description:</label>
+                    <textarea id="editMonumentDesc" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editMonumentCity">City:</label>
+                    <input type="text" id="editMonumentCity" required>
+                </div>
+                <button type="submit" class="btn">Update Monument</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
